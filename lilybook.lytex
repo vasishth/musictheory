@@ -1,0 +1,533 @@
+\documentclass[a4paper]{article}
+
+\title{Music theory notes (for the guitar)}
+\author{Shravan Vasishth}
+\date{Version of \today}
+
+
+
+\begin{document}
+
+\maketitle
+
+\section{Minor scales}
+
+Natural, Harmonic, and Melodic (raised 6th and 7th when ascending only).
+
+\section{Modes}
+
+Mnemonic: I Don't Punch Like Muhammad A-Li
+
+\begin{itemize}
+\item
+Ionian: C
+\item
+Dorian: D
+\item
+Phrygian: E
+\item
+Lydian: F
+\item
+Mixolydian: G
+\item
+Aeolian: A
+\item
+Locrian: B
+\end{itemize}
+
+\section{Scale degrees/Intervals}
+
+\begin{itemize}
+\item
+Major intervals: 2nd, 3rd, 6th, 7th
+\item
+Perfect intervals: 1st, 4th, 5th, 8th
+\end{itemize}
+
+\subsection{Perfect, Augmented, Diminished Intervals}
+
+\begin{itemize}
+\item
+2,3,6,7 Major Intervals: add one semitone to top note gives an augmented interval
+\item
+2,3,6,7 Major Intervals: lower one semitone gives a minor interval
+\item
+2,3,6,7 Major Intervals: lower one tone (two semitones) gives a diminished interval
+\end{itemize}
+
+\subsection{Example: C major}
+
+\begin{lilypond}
+\context Voice \relative c' {
+% Prime or unison
+  < c c >^"per"
+% Second
+  < c d >^"maj"
+% Third
+  < c e >^"maj"
+% Fourth
+  < c f >^"min"
+% Fifth
+  < c g' >^"min"
+% Sixth
+  < c a' >^"maj"
+% Seventh
+  < c b' >^"maj"
+% Octave
+  < c c' >^"per"
+}
+%\context Lyrics \lyrics {
+%  ""
+%  ""
+%  "1st"
+%  "2nd"
+%  "3rd"
+%  "4th"
+%  "5th"
+%  "6th"
+%  "7th"
+%  "8th"
+%}
+\end{lilypond}
+
+
+\begin{itemize}
+\item
+    Scale degree 1 is known as the tonic.
+\item
+    Scale degree 4 is known as the subdominant.
+\item
+    Scale degree 5 is the dominant. 
+\end{itemize}
+
+
+\section{Chords}
+
+\subsection{Major third}
+
+4 semitones apart (C-E)
+
+\subsection{Perfect fifths}
+
+7 semitones apart (C-G)
+
+\subsection{Triads}
+
+\subsubsection{Inversions}
+
+\begin{itemize}
+\item
+    Root position - if a chord has the root note as the lowest pitch, e.g. C E G (1-3-5).
+\item
+    First inversion - if a chord has the third as the lowest sounding note, e.g. E G C (3-5-1).
+\item
+    Second inversion - if a chord has the fifth as the lowest sounding note, e.g. G C E (5-1-3).
+\end{itemize}
+
+\subsubsection{Some examples of triads}
+
+\paragraph{C Major (CEG GBD)}
+
+Major triad because it has a perfect fifth C-G, i.e., 7 semitones, and a Major third, four semitones (C-E).
+
+ \begin{lilypond}
+        \relative c' {
+        \time 3/4  c e g 
+        }
+
+        \relative c' {
+        \time 1/4
+        <c e g>
+        }
+    \end{lilypond}
+
+\paragraph{A Minor}
+
+A-E is seven semitones but A-C has 3 semitones (=minor third), hence Minor triad.
+
+  \begin{lilypond}
+        \relative c' {
+        \time 3/4  a c e 
+        }
+
+        \relative c' {
+        \time 1/4
+        <a c e>
+        }
+    \end{lilypond}
+
+
+
+
+\paragraph{D}
+
+Minor triad (D-A 7 semitones, D-F 3 semitones)
+
+\begin{lilypond}
+        \relative c' {
+        \time 3/4 d f a
+        }
+    \end{lilypond}
+
+\begin{lilypond}
+        \relative c' {
+        \time 1/4 <d f a>
+        }
+    \end{lilypond}
+
+
+\paragraph{E}
+
+Minor triad (E-B 7 semitones, E-G 3 semitones)
+
+\begin{lilypond}
+        \relative c' {
+        \time 3/4 e g b
+        }
+    \end{lilypond}
+
+\begin{lilypond}
+        \relative c' {
+        \time 1/4 <e g b>
+        }
+    \end{lilypond}
+
+
+\paragraph{F Major (FAC CEG)}
+
+Major triad
+
+  \begin{lilypond}
+        \relative c' {
+        \time 3/4
+          f a c 
+        }
+    \end{lilypond}
+
+
+  \begin{lilypond}
+        \relative c' {
+        \time 1/4
+          <f a c> 
+        }
+    \end{lilypond}
+
+  \begin{lilypond}
+        \relative c' {
+         \time 3/4 c' e g 
+        }
+    \end{lilypond}
+
+
+\paragraph{G Major (GBD DF\#A )}
+
+Major triad
+
+  \begin{lilypond}
+        \relative c' {
+        \time 3/4  g b d
+        }
+    \end{lilypond}
+
+  \begin{lilypond}
+        \relative c' {
+        \time 1/4  <g b d>
+        }
+    \end{lilypond}
+
+
+  \begin{lilypond}
+        \relative c' {
+        \time 3/4  d' fis a 
+        }
+    \end{lilypond}
+
+\paragraph{B}
+
+Diminished fifth (6 semitones) + Minor third = Diminished triad
+
+\begin{lilypond}
+        \relative c' {
+        \time 3/4  b d f
+        }
+    \end{lilypond}
+
+
+\begin{lilypond}
+        \relative c' {
+        \time 1/4  <b d f>
+        }
+    \end{lilypond}
+
+
+
+\subsubsection{C major triads}
+
+\begin{enumerate}
+\item[I]: Tonic
+C maj 
+
+\begin{lilypond}
+\chords { c1 }
+  \chordmode { c1 }
+\end{lilypond}
+
+\item[ii]: 
+Dmin 
+
+\begin{lilypond}
+\chords { d1:min }
+  \chordmode { d1:min }
+\end{lilypond}
+
+\item[iii]: 
+Emin 
+
+\begin{lilypond}
+\chords { e1:min }
+  \chordmode { e1:min }
+\end{lilypond}
+
+\item[IV]: Subdominant
+Fmaj
+
+\begin{lilypond}
+\chords { f1 }
+  \chordmode { f1 }
+\end{lilypond}
+
+\item[V]: Dominant:
+ Gmaj 
+
+\begin{lilypond}
+\chords { g1 }
+  \chordmode { g1 }
+\end{lilypond}
+
+
+ \item[vi]: 
+ Amin 
+
+ \begin{lilypond}
+\chords { a1:min }
+  \chordmode { a1:min }
+\end{lilypond}
+
+ \item[vii]: 
+ Bdim
+
+\begin{lilypond}
+\chords { b1:dim }
+  \chordmode { b1:dim }
+\end{lilypond}
+
+
+\end{enumerate}
+
+\begin{lilypond}
+\include "predefined-guitar-fretboards.ly"
+
+mychords = \chordmode {
+  c1 d:m e:m f g a:m b:dim
+}
+
+chordsline = {
+  \mychords
+  }
+
+\score {
+  <<
+    \new ChordNames {
+      \chordsline
+    }
+    \new FretBoards {
+      \chordsline
+    }
+  >>
+  \layout {
+    \context {
+      \Score
+      \remove Bar_number_engraver
+    }
+  }
+}
+
+\end{lilypond}
+
+Any diatonic melody can be harmonized with I-IV-V because every single scale degree occurs in this pool of notes.
+
+\subsubsection{A minor triads}
+
+\begin{enumerate}
+\item[i]: Tonic
+Amin 
+\item[ii]: 
+Bmin 
+\item[III]:
+Caug 
+\item[iv]: Subdominant
+Dmin
+\item[V]: Dominant:
+ Emaj 
+ \item[VI]: 
+ Fmaj 
+ \item[vii]: 
+ Gdim
+\end{enumerate}
+
+\begin{lilypond}
+\include "predefined-guitar-fretboards.ly"
+
+mychords = \chordmode {
+  a:m b:min c:aug d:min e:maj f:maj g:dim
+}
+
+chordsline = {
+  \mychords
+  }
+
+\score {
+  <<
+    \new ChordNames {
+      \chordsline
+    }
+    \new FretBoards {
+      \chordsline
+    }
+  >>
+  \layout {
+    \context {
+      \Score
+      \remove Bar_number_engraver
+    }
+  }
+}
+
+\end{lilypond}
+
+
+
+\subsection{Seventh Chords}
+
+These are triads with a seventh degree added.
+
+\subsubsection{C major seventh chords}
+\begin{enumerate}
+\item[I]: Tonic
+C maj7 
+\item[ii]: 
+Dmin7 
+\item[iii]
+Emin7
+\item[IV] Subdominant
+Fmaj7
+\item[V] Dominant seventh:
+ G7 
+ \item[vi] 
+ Amin7 
+ \item[vii] 
+ B half-dim
+\end{enumerate}
+
+\begin{lilypond}
+\include "predefined-guitar-fretboards.ly"
+
+mychords = \chordmode {
+  c1:maj7 d:m7 e:m7 f:maj7 g:maj7 a:m7 b:dim7.5-
+}
+
+chordsline = {
+  \mychords
+  }
+
+\score {
+  <<
+    \new ChordNames {
+      \chordsline
+    }
+    \new FretBoards {
+      \chordsline
+    }
+  >>
+  \layout {
+    \context {
+      \Score
+      \remove Bar_number_engraver
+    }
+  }
+}
+
+\end{lilypond}
+
+
+\subsubsection{A minor seventh chords}
+
+\begin{enumerate}
+\item[i]: Tonic
+Aminmaj7 
+\item[ii]: 
+Bhalf-diminished
+\item[III]
+Caug-maj7 
+\item[iv] Subdominant
+Dmin7
+\item[V] Dominant:
+ E7 
+ \item[VI] 
+ Fmaj7 
+ \item[vii] 
+ G\#dim7
+\end{enumerate}
+
+\begin{lilypond}
+\include "predefined-guitar-fretboards.ly"
+
+mychords = \chordmode {
+  a:m7+ b:min7.5- c:aug7+ d:min7 e:maj7 f:maj7 gis:dim7
+}
+
+chordsline = {
+  \mychords
+  }
+
+\score {
+  <<
+    \new ChordNames {
+      \chordsline
+    }
+    \new FretBoards {
+      \chordsline
+    }
+  >>
+  \layout {
+    \context {
+      \Score
+      \remove Bar_number_engraver
+    }
+  }
+}
+
+\end{lilypond}
+
+
+
+\section{Cadences}
+
+The tonic note of every scale has two closely related triads: the one a fifth above the tonic is the dominant triad, and the one a fifth below is the subdominant. So every tonic tone is the center of a trio of strongly related chords, for example, F...C...G
+
+Dominant chord to Tonic 
+
+A cadence is a melodic or harmonic progression that creates a sense of finality or a pause in the music.
+
+Perfect cadence: A G7 followed by a C. Numerically speaking, this is chord V7 followed by chord I.
+
+Imperfect cadence:  C followed by G7. Numerically speaking this is chord I followed by chord V7, i.e. the reverse of the example above. 
+
+
+
+
+\section{Common progressions}
+
+\end{document}
+
+
